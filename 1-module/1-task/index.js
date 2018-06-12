@@ -5,7 +5,7 @@
  * @returns {number}
  */
 function pow (m, n) {
-    if(m !== (m ^ 0)|| n !== (n ^ 0)){
+    if(+m !== Math.floor(m) || +n !== Math.floor(n)){
         alert("Enter an integer");
         return;
     }
