@@ -5,9 +5,13 @@
  * @returns {number}
  */
 function pow (m, n) {
-   let result = m;
-   for(let i = 2; i <= n; i++){
-       result*=m;
-   }
-   return result;
+    if(m !== (m ^ 0)|| n !== (n ^ 0)){
+        alert("Enter an integer");
+        return;
+    }
+    let result = m;
+    for(let i = 2; i <= n; i++){
+        result*=m;
+    }
+    return result;
 }
