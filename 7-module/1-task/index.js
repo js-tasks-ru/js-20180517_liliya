@@ -7,6 +7,10 @@
  * @param {Array} log - массив для записи логов
  * @return {Function}
  */
-function makeLogging(fn, log) {
 
+function makeLogging(fn, log) {
+    return function(){
+        log.push(arguments);
+        return fn.apply(this, arguments);
+    }
 }
